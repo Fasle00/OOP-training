@@ -27,8 +27,9 @@ public class PolyLine {
         StringBuilder out = new StringBuilder();
         for (Point point :
                 points) {
-            out.append(point.toString());
+            out.append(point.toString() + ", ");
         }
+        out.delete(out.lastIndexOf(","), out.length());
         return out.toString();
     }
 
